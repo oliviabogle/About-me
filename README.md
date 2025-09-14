@@ -6,7 +6,7 @@
 </head>
 <body>
   <header>
-    <h1>Hello World!</h1>
+    <h1>Olivia Bogle</h1>
     <nav>
       <a href= "https://www.pinterest.com/">My Favorite Webpage</a>
     </nav>
