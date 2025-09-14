@@ -3,14 +3,14 @@
 
   <main>
     <section>
-      <h2>👋 About Me</h2>
-      <p><strong>Favorite Marvel character:</strong> Daredevil</p>
+                        <h2>👋 About Me</h2>
       <p><strong>Death row meal:</strong> endless sushi</p>
+      <p><strong>Favorite Marvel character:</strong> Daredevil</p>
       <p><strong>Favorite quote:</strong> 
-        “How much happened to you - that should have broke you - that did not break you- 
+        “How much happened to you - that should have broken you - that did not break you... - 
         that's what you have in common with every hero of every story.”
       </p>
-      <p><strong>Hobbies:</strong> beauty,the gym, volunteering and cooking.</p>
+      <p><strong>Hobbies:</strong> the gym, volunteering and cooking.</p>
       <p><strong>Fun fact:</strong> I’ve solo traveled abroad, play two instruments, 
         love learning new languages to connect with people across cultures, 
         and I’ve watched the MCU at least six times (still not over Endgame)
