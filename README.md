@@ -1,9 +1,14 @@
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+</head>
+<body>
   <main>
     <section>
-                        <h2>👋 About Me</h2>
+      <h2>👋 About Me</h2>
       <p><strong>Death row meal:</strong> endless sushi</p>
       <p><strong>Favorite Marvel character:</strong> Daredevil</p>
       <p><strong>Favorite quote:</strong> 
@@ -13,7 +18,7 @@
       <p><strong>Hobbies:</strong> the gym, volunteering and cooking.</p>
       <p><strong>Fun fact:</strong> I’ve solo traveled abroad, play two instruments, 
         love learning new languages to connect with people across cultures, 
-        and I’ve watched the MCU at least six times (still not over Endgame)
+        and I’ve watched the MCU at least six times (still not over Endgame).
       </p>
       <p><strong>Aspiration:</strong> I aspire to work in trust & policy.</p>
     </section>
@@ -47,3 +52,4 @@
   </main>
 </body>
 </html>
+
