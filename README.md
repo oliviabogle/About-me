@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <header>
+    <h1>Hello World!</h1>
+    <nav>
+      <a href= "https://www.pinterest.com/">My Favorite Webpage</a>
+    </nav>
+  </header>
+  
   <main>
     <section>
       <h2>👋 About Me</h2>
@@ -15,37 +22,35 @@
         that's what you have in common with every hero of every story.”
       </p>
       <p><strong>Hobbies:</strong> the gym, volunteering and cooking.</p>
-  
       </p>
       <p><strong>Aspiration:</strong> I aspire to work in trust & policy.</p>
     </section>
-
     <!-- A locally stored photo -->
     <section>
       <h2>My Gym</h2>
-      <img src="imgs/fileindex.jpg" alt="A picture of my gym" width="400">
+      <img src="img/fileindex.jpg" alt="A picture of my gym" width="400">
     </section>
-
     <!-- An external large image -->
     <section>
-      <h2>Favorite Place</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Wilson_Park_Florence_AL.jpg" 
-           alt="Wilson Park, Florence AL" width="500">
+      <h2>Favorite Food</h2>
+      <img src="https://fortune.com/img-assets/wp-content/uploads/2016/10/496870680.jpg"
+           alt="Whole Foods" width="400">
     </section>
-
     <!-- A Google Maps iframe -->
     <section>
-      <h2>Location</h2>
+      <h2>My Favorite Place</h2>
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.9539333484165!2d-87.67864912461355!3d34.8028970729088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88626c1e02f0e63f%3A0x5a0b6f9e29b4c45f!2sWilson%20Park!5e0!3m2!1sen!2sus!4v1694799999999"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12093.141500802556!2d-74.01100188863359!3d40.73374569224178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259940c3213a7%3A0x8882c42182df455f!2sGreenwich%20Village%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1757888226090!5m2!1sen!2sus"
         width="600" 
         height="450" 
         style="border:0;" 
         allowfullscreen="" 
-        loading="lazy" 
+        loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+      <p>I Love going to this place!</p>
     </section>
+    
   </main>
 </body>
 </html>
