@@ -1,69 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
 </head>
+
 <body>
   <header>
+    <a href="#" class="logo"> Olivia</a>
+
     <nav>
       <a href= "https://www.linkedin.com/in/oliviabogle2025">About Me</a> 
-      <a href= "https://www.pinterest.com/">My Favorite Webpage</a> 
-      <a href= "https://www.tiktok.com/explore">My Favorite Social Media</a>
-      <a href= "https://www.revolve.com/"> My Favorite Clothing Store</a>
+      <a href= "https://www.pinterest.com/">Favorite Webpage</a> 
+      <a href= "https://www.tiktok.com/explore">Favorite Social</a>
+      <a href= "https://www.revolve.com/">Favorite Store</a>
+      <span></span>
     </nav>
   </header>
   
   <main>
-    <section>
-      <h2>👋 About Me</h2>
-      <p><b>Death row meal:</b> Endless Sushi 🍣</p>
-      <p><b>Favorite Marvel character:</b> <i>Daredevil</i> </p>
-      <p><b>Favorite quote:</b><br>
-        “How much happened to you - that should have broken you - that did not break you... <br>
-        - that's what you have in common with every hero of every story.”
-      </p>
-      <p><b>Hobbies:</b> 
-        <ul>
-          <li>The Gym 🏋️</li>
-          <li>Volunteering </li>
+    <section style="max-width:700px; margin:5rem auto; border:5px solid black; padding:2rem; background:#fff; border-radius:12px; box-shadow:0 10px 20px rgba(0,0,0,0.2); font-family:'Poppins', sans-serif; color:#222; text-align:center;">
+      <h2 style="color:#222; font-weight:700; font-size:3rem; margin-bottom:1.5rem;">
+        About Me 👋</h2>
+      <p style="font-weight:600; margin-bottom:1rem;">Death row meal: Endless Sushi 🍣</p>
+      <p style="font-weight:600; margin-bottom:1rem;">Favorite Marvel Character:<i> Daredevil</i> </p>
+      <p style="font-weight:600; margin-bottom:1rem;">Favorite quote:<br>
+      <p2>
+        “How much happened to you - that should have broken you - that did not break you... -<br>
+         that's what you have in common with every hero of every story.”
+      </p2>
+      <p style="font-weight:600; margin-bottom:0.5rem;">Hobbies: 
+        <ul style="list-style:none; padding-left:0; margin-bottom:1rem;">
+          <li style="margin-bottom:0.5rem;">The Gym 🏋️</li>
+          <li style="margin-bottom:0.5rem;">Volunteering </li>
           <li>Cooking 🍳</li>
         </ul>
       </p>
       <p><b>Aspiration:</b> I aspire to work in <i>trust & policy</i>. </p>
     </section>
 
-    <!-- A locally stored photo -->
-    <section>
-      <h2>My Gym</h2>
-      <img src="fileindex.jpg" alt="A picture of my gym" width="400">
-    </section>
+    <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; margin:2rem 0;">
+      <!-- A locally stored photo -->
+      <section>
+        <h2 style="font-family:'Poppins', sans-serif; font-size:3rem; font-weight:700; color:#222; margin-bottom:1.5rem;">
+          My Gym</h2>
+        <img src="imgs/fileindex.jpg" alt="A picture of my gym" width="400" style="border:1px solid #ccc; padding:10px; background:#fff; box-shadow:0 10px 20px rgba(0,0,0,0.2);">
+      </section>
 
-    <!-- An external large image -->
-    <section>
-      <h2>Favorite Food</h2>
-      <img src="https://fortune.com/img-assets/wp-content/uploads/2016/10/496870680.jpg" alt="Whole Foods" width="400">
-    </section>
-
+      <!-- An external large image -->
+      <section>
+        <h2 style="font-family:'Poppins', sans-serif; font-size:3rem; font-weight:700; color:#222; margin-bottom:1.5rem;">
+          Favorite Food</h2>
+        <img src="https://fortune.com/img-assets/wp-content/uploads/2016/10/496870680.jpg" alt="Whole Foods" width="400" style="border:1px solid #ccc; padding:10px; background:#fff; box-shadow:0 10px 20px rgba(0,0,0,0.2);">
+      </section>
+    </div>
+    
     <!-- A Google Maps iframe -->
-    <section>
-      <h2>My Favorite place</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12093.141417599958!2d-74.00070215!3d40.733746149999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259940c3213a7%3A0x8882c42182df455f!2sGreenwich%20Village%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1757889477491!5m2!1sen!2sus" 
-        width="600" 
-        height="450" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <section style="margin:3rem 0;">
+      <h2 style="font-family:'Poppins', sans-serif; font-size:3rem; font-weight:700; color:#222; margin-bottom:1.5rem; margin-left: 22rem;">
+        My Favorite place</h2>
+
+      <div style="text-align:center;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12093.141417599958!2d-74.00070215!3d40.733746149999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259940c3213a7%3A0x8882c42182df455f!2sGreenwich%20Village%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1757889477491!5m2!1sen!2sus" 
+          style="width:100%; max-width:700px; height:450px; border:5px solid black; padding:5px; background:#fff; border-radius:12px; box-shadow:0 10px 20px rgba(0,0,0,0.2);"
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
     </section>
   </main>
+
   <footer>
     <p>Made by Olivia Bogle - CIS 207: Web Development - 2025</p>
   </footer>
 </body>
 </html>
+
+
 
 
 
