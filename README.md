@@ -15,7 +15,7 @@
   <main>
     <section>
       <h2>👋 About Me</h2>
-      <p><strong>Death row meal:</strong> endless sushi</p>
+      <p><strong>Death row meal:</strong> sushi</p>
       <p><strong>Favorite Marvel character:</strong> Daredevil</p>
       <p><strong>Favorite quote:</strong> 
         “How much happened to you - that should have broken you - that did not break you... - 
