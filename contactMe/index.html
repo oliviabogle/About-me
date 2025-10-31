@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title> 
+</head>
+
+
+<body>
+    <header>
+    <a href="#" class="logo"> Olivia</a> 
+
+    <nav>
+      <a href = "../index.html">About Me</a>
+      <a href= "https://www.linkedin.com/in/oliviabogle2025">LinkedIn</a> 
+      <a href= "https://www.tiktok.com/explore">Favorite Social</a>
+      <a href= "../cssProjects/index.html">CSS Projects</a>
+      <span></span>
+    </nav>
+  </header>
+
+  <div id="overlay">
+      <form id="contactForm">
+          <h1>Contact Me</h1>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your name">
+          <small class="error"></small>
+
+          <label for="email">Email:</label>
+          <input type="text" id="email" placeholder="Your email">
+          <small class="error"></small>
+
+          <label for="message">Message:</label>
+          <textarea id="message" placeholder="Your message" rows="6"></textarea>
+          <small class="error"></small>
+
+          <div class="center">
+              <input type="submit" value="Send Message">
+              <p id="success"></p>
+          </div>
+
+      </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+  (function(){
+    emailjs.init("QmIfSPqlZpk1nVGMt"); // Replace with your actual public key from EmailJS
+  })();
+</script>
+  <script src="scripts/form.js"></script>
+
+  <footer>
+    <p>Made by Olivia Bogle - CIS 207: Web Development - 2025</p>
+  </footer>
+</body>
