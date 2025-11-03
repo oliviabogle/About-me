@@ -37,6 +37,7 @@ header{
 }
 
 .logo{
+    font-family: 'Garamond', serif;
     font-size: 3rem;
     color: #fff;
     font-weight: 650;
