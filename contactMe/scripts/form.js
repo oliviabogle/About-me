@@ -1,79 +1,85 @@
-// Get data
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
-const messageInput = document.querySelector("#message");
-const success = document.querySelector("#success");
-const errorNodes = document.querySelectorAll(".error");
+// get info from user
+const nameField = document.querySelector("#name");
+const emailField = document.querySelector("#email");
+const messageField = document.querySelector("#message");
+const successMessage = document.querySelector("#success");
+const errorMessages = document.querySelectorAll(".error");
 
-// Validate
-function validateForm(event){
-    event.preventDefault();
-    clearMessages();
-    let errorFlag = false;
+// when the form is submitted
+function checkForm(event) {
+  // Stop page from reloading
+  event.preventDefault(); 
+  
+  clearAllMessages();
+  let hasError = false;
 
-    if(nameInput.value.trim().length < 1){
-        errorNodes[0].innerText = "Name cannot be blank";
-        nameInput.classList.add("error-border");
-        errorFlag = true;
-    }
- 
-    if(!emailIsValid(emailInput.value)){
-        errorNodes[1].innerText = "Invalid email";
-        emailInput.classList.add("error-border");
-        errorFlag = true;
-    }
+  // check for empty name
+  if (nameField.value.trim().length < 1) {
+    errorMessages[0].innerText = "Name cannot be blank";
+    nameField.classList.add("error-border");
+    hasError = true;
+  }
 
-    if(messageInput.value.trim().length < 1){
-        errorNodes[2].innerText = "Please enter a message";
-        messageInput.classList.add("error-border");
-        errorFlag = true;
-    }
+  // check if email looks valid
+  if (!isValidEmail(emailField.value)) {
+    errorMessages[1].innerText = "Invalid email";
+    emailField.classList.add("error-border");
+    hasError = true;
+  }
 
-    if(!errorFlag){
-        sendEmail();
-    }
-} 
+  // check if message is empty
+  if (messageField.value.trim().length < 1) {
+    errorMessages[2].innerText = "Please enter a message";
+    messageField.classList.add("error-border");
+    hasError = true;
+  }
 
-// Send email using EmailJS
+  // send email if no errors
+  if (!hasError) {
+    sendEmail();
+  }
+}
+
+// found EmailJS through chatgpt
 function sendEmail() {
-  const params = {
-    name: nameInput.value,
-    email: emailInput.value,
-    message: messageInput.value,
+  const emailData = {
+    name: nameField.value,
+    email: emailField.value,
+    message: messageField.value,
   };
 
   emailjs
-    .send("service_ymhxh2l", "template_otyz6tg", params)
+    .send("service_ymhxh2l", "template_otyz6tg", emailData)
     .then(() => {
-      success.innerText = "Message sent successfully!";
-      success.style.color = "black";
-      nameInput.value = "";
-      emailInput.value = "";
-      messageInput.value = "";
+      successMessage.innerText = "Message sent successfully!";
+      successMessage.style.color = "black";
+      nameField.value = "";
+      emailField.value = "";
+      messageField.value = "";
     })
     .catch((error) => {
-      success.innerText = "Failed to send message. Try again later.";
-      success.style.color = "red";
+      successMessage.innerText = "Failed to send message. Try again later.";
+      successMessage.style.color = "red";
       console.error("EmailJS error:", error);
     });
 }
 
-// Clear error messages
-function clearMessages(){
-    for(let i=0; i < errorNodes.length; i++){
-        errorNodes[i].innerText = "";
-    }
-    success.innerText = "";
-    nameInput.classList.remove("error-border");
-    emailInput.classList.remove("error-border");
-    messageInput.classList.remove("error-border");
+// remove all messages
+function clearAllMessages() {
+  for (let i = 0; i < errorMessages.length; i++) {
+    errorMessages[i].innerText = "";
+  }
+  successMessage.innerText = "";
+  nameField.classList.remove("error-border");
+  emailField.classList.remove("error-border");
+  messageField.classList.remove("error-border");
 }
 
-// Is email valid?
-function emailIsValid(email){
-    let pattern = /\S+@\S+\.\S+/;
-    return pattern.test(email);
-} 
+// check if email is in right format
+function isValidEmail(email) {
+  let pattern = /\S+@\S+\.\S+/;
+  return pattern.test(email);
+}
 
-// Attach submit event
-document.getElementById("contactForm").addEventListener("submit", validateForm);
+// runs after submit
+document.getElementById("contactForm").addEventListener("submit", checkForm);

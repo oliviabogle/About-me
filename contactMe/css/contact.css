@@ -9,10 +9,6 @@ body {
   min-height: 100%;
 }
 
-#overlay {
-  width: 100%;
-}
-
 
 form {
   max-width: 550px;
@@ -73,11 +69,11 @@ input[type="submit"] {
   border-radius: 3px;
 }
 
-.error {
+.error{
   color: red;
 }
 
-.error-border {
+.error-border{
   border-bottom: 1px solid red;
 }
 
