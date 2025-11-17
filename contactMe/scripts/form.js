@@ -7,7 +7,7 @@ const errorMessages = document.querySelectorAll(".error");
 
 // when the form is submitted
 function checkForm(event) {
-  // Stop page from reloading
+  // stop page from reloading
   event.preventDefault(); 
   
   clearAllMessages();
@@ -20,7 +20,7 @@ function checkForm(event) {
     hasError = true;
   }
 
-  // check if email looks valid
+  // check valid email
   if (!isValidEmail(emailField.value)) {
     errorMessages[1].innerText = "Invalid email";
     emailField.classList.add("error-border");
@@ -34,8 +34,9 @@ function checkForm(event) {
     hasError = true;
   }
 
-  // send email if no errors
+  // send email and update table if no errors
   if (!hasError) {
+    updateTable();      
     sendEmail();
   }
 }
@@ -81,5 +82,35 @@ function isValidEmail(email) {
   return pattern.test(email);
 }
 
+
+
+function updateTable() {
+  const resultContainer = document.getElementById("resultContainer");
+  const resultBody = document.querySelector("#resultTable tbody");
+
+  // clear old rows
+  resultBody.innerHTML = "";
+
+  // create rows for Name, Email, Message
+  const formData = [
+    ["Name", nameField.value],
+    ["Email", emailField.value],
+    ["Message", messageField.value]
+  ];
+
+  formData.forEach(([label, value]) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${label}</td><td>${value}</td>`;
+    resultBody.appendChild(row);
+  });
+
+  // show the table container
+  resultContainer.style.display = "block";
+}
+
+
+
 // runs after submit
-document.getElementById("contactForm").addEventListener("submit", checkForm);
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  checkForm(e);
+});
